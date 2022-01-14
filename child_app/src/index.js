@@ -3,17 +3,14 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { PostMessageListener } from "./Components/PostMessageListener";
-import { IFrameRouterContextProvider } from "./Components/IFrameRouterContext";
 import { BrowserRouter } from "react-router-dom";
+import { RoutingListener } from "./Components/RoutingListener";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <IFrameRouterContextProvider>
-        <PostMessageListener />
-        <App />
-      </IFrameRouterContextProvider>
+      <RoutingListener />
+      <App />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
